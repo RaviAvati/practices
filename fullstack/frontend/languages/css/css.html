@@ -4,32 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .class{
+            margin: 0;
+        padding: 0;
+        height: auto;
+        width: auto;
+        background-color: darkslategray;
+        border: solid red ;
+        border-width: 5px;
+        }
+        .w3-boxmodel .margin {
+    background: #f1f1f1;
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border: 2px dashed #bbb;
+    transition: all .25s ease-in-out;
+    color: black;}
+    
+    </style>
 </head>
 <body>
-    <style>
-        div{
-            width: auto;
-            height: auto;
-            background-color: aqua;
-        }
-    </style>
-    <div>
-    <h1>css topics</h1>
-    <a href="./colors/colors.html"> color tags</a>
-    <br>
+   
+   <div class="class">
+     <u> <h1>CSS  (Cascading Style Sheets)</h1></u>
+      
+
+
+        <u><h2>CSS Colors</h2></u>
+        <p>Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values. </p>
+       <u> <h4>this is the example of color tag</h4></u>
+         <a href="./colors/colors.html"> color tags</a>
+
+         <u><h2>CSS Background Color</h2></u>
+         <p>You can set the background color for HTML elements:</p>
+
+         <div style="-webkit-text-size-adjust: 100%;
+         font-family: Verdana,sans-serif;
+         line-height: 1.5;
+         box-sizing: inherit;
+         background-color: red;
+         text-align: center;
+         color: rgb(255, 255, 255);
+         font-size: 24px;">hello world</div>
+<u><h4>this is the example of background-color</h4></u>
+       <a href="./background/background.html"> background Color</a>
+  
+       <u><h2>CSS Height, Width and Max-width</h2></u>
+       <p>The CSS height and width properties are used to set the height and width of an element. <br>
+
+        The CSS max-width property is used to set the maximum width of an element.</p>
+        <h2>CSS Setting height and width</h2>
+        <p>The height and width properties are used to set the height and width of an element. <br>
+
+            The height and width properties do not include padding, borders, or margins. It sets the height/width of the area inside the padding, <br>border, and margin of the element.</p>
+            <h2>CSS height and width Values</h2>
+            <p>The <code class="w3-codespan">height</code> and <code class="w3-codespan">width</code> properties 
+                may have the following values:</p>
+            <ul>
+                <li><code class="w3-codespan">auto</code> - This is default. The browser 
+                calculates the height and width</li>
+                <li><code class="w3-codespan">length</code> - Defines the height/width in px, cm, 
+                etc.</li>
+                <li><code class="w3-codespan">%</code> - Defines the height/width in percent of 
+                the containing block</li>
+                <li><code class="w3-codespan">initial</code> - Sets the height/width to its 
+                default value</li>
+                  <li><code class="w3-codespan">inherit</code> - The height/width will be 
+                  inherited from its parent value</li>
+                </ul>
+        <u><h4>example of height and width</h4></u>
+
     <a href="./width/width.html">width tag</a>
     <br>
     <a href="./height/height.html"> height</a>
     <br>
-    <a href="./background/background.html"> background</a>
-    <br>
+<u><h2>CSS Box box-model</h2></u>
+<h2>The CSS Box Model</h2>
+<p>In CSS, the term "box model" is used when talking about design and layout.</p>
+<p>The CSS box model is essentially a box that wraps around every HTML element. <br> 
+    It consists of: margins, borders, padding, and the actual content. </p>
+    <p>Explanation of the different parts:</p>
+    <ul>
+        <li><b>Content</b> - The content of the box, where text and images appear</li>
+        <li><b>Padding</b> - Clears an area around the content. The padding is transparent</li>
+        <li><b>Border</b> - A border that goes around the padding and content</li>
+        <li><b>Margin</b> - Clears an area outside the border. The margin is 
+        transparent</li>
+        </ul>
+   
+         <u><h4>example of box modle</h4></u>  
+
     <a href="./box-model/boxmodel.html">box box-model</a>
     <br>
+
     <a href="./3 ways of css/external.html">externel ways</a>
     <br>
     <a href="./3 ways of css/internal.html">internal ways</a>
     <br>
     <a href="./3 ways of css/inline.html">inline ways</a> 
+    <br>
+    
+    <a href="./inline-block/inlineblock.html">inline-block ways</a>
+<h1>selectors</h1>
+    <a href="./selecters/tag.html"> tags</a>
+    <br>
+    <a href="./selecters/idselecters.html">idselecters</a>
+    <br>
+    <a href="./selecters/classselecters.html">classselecter</a>
 </div>
+
 </body>
 </html>
