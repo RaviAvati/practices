@@ -10,7 +10,7 @@
         padding: 0;
         height: auto;
         width: auto;
-        background-color: darkslategray;
+        background-color: white;
         border: solid red ;
         border-width: 5px;
         }
@@ -23,7 +23,50 @@
     border: 2px dashed #bbb;
     transition: all .25s ease-in-out;
     color: black;}
-    
+
+    #rcorners4 {
+        background-color: black;
+
+        color: black;
+    border-radius: 15px 50px 30px 5px;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+#rcorners5 {
+    background-color: black;
+    border-radius: 15px 50px 30px;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+#rcorners6 {
+    background-color: black;
+    border-radius: 15px 50px;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+#rcorners7 {
+    background-color: black;
+    border-radius: 15px;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+.w3-responsive {
+    display: block;
+    overflow-x: auto;
+}
+.ws-table-all {
+    margin: auto;
+    padding: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+    border: 1px solid #ccc;
+}
     </style>
 </head>
 <body>
@@ -99,21 +142,194 @@
 
     <a href="./box-model/boxmodel.html">box box-model</a>
     <br>
+<u><h2>Three Ways to Insert CSS</h2></u>
+<p>There are three ways of inserting a style sheet:</p>
+<ul>
+    <li>External CSS</li>
+    <li>Internal CSS</li>
+    <li>Inline CSS</li>
+    </ul>
 
+    <h2>External CSS</h2>
+    <p>With an
+        external style sheet, you can change the look of an entire website by changing 
+        just one file!</p>
+        <p>Each HTML page must include a reference to the external style sheet file inside 
+            the &lt;link&gt; element, inside the head section.</p>
+            <p>An external style sheet can be written in any text editor, and must be saved with a .css extension.</p>
+            <p>The external .css file should not contain any HTML tags.</p>
+            <u><h4>example of external ways</h4></u>
     <a href="./3 ways of css/external.html">externel ways</a>
     <br>
+    <h2>Internal CSS</h2>
+    <p>An internal style sheet may be used if one single HTML page has a unique style.</p>
+    <p>The internal style is defined inside the &lt;style&gt; element, inside the head 
+        section.</p>
+        <u><h4>example of internal ways</h4></u>
     <a href="./3 ways of css/internal.html">internal ways</a>
     <br>
+    <h2>Inline CSS</h2>
+    <p>An inline style may be used to apply a unique style for a single element.</p>
+    <p>To use inline styles, add the style attribute to the relevant element. The
+        style attribute can contain any CSS property.</p>
+        <u><h4>example of inline way</h4></u>
+
     <a href="./3 ways of css/inline.html">inline ways</a> 
     <br>
-    
+    <u><h2>CSS <span class="color_h1">Layout - display: inline-block</span></h2></u>
+    <h2>The display: inline-block Value</h2>
+    <p>Compared to <code class="w3-codespan">display: inline</code>, the major 
+        difference is that <code class="w3-codespan">display: inline-block</code> allows 
+        to set a width and height on the element.</p>
+        <p>Also, with <code class="w3-codespan">
+            display: inline-block</code>, the top and bottom margins/paddings are respected, 
+            but with <code class="w3-codespan">display: inline</code> they are not.</p>
+            <p>Compared to <code class="w3-codespan">display: block</code>, the major 
+                difference is that <code class="w3-codespan">display: inline-block</code> does 
+                not add a line-break after the element, so the element can sit next to other 
+                elements.</p>
+                <p>The following example shows the different behavior of <code class="w3-codespan">display: inline</code>, <code class="w3-codespan">display: inline-block</code> 
+                    and <code class="w3-codespan">display: block</code>:</p>
+                    <u><h4>example of inline-block</h4></u>
+
     <a href="./inline-block/inlineblock.html">inline-block ways</a>
-<h1>selectors</h1>
+
+     <u><h2>Selectors</h2></u>
+
     <a href="./selecters/tag.html"> tags</a>
     <br>
+    <u><h2>CSS <span class="color_h1">Selectors</span></h2></u>
+    <h2>CSS Selectors</h2>
+    <p>We can divide CSS selectors into five categories:</p>
+    <ul>
+        <li>Simple selectors (select elements based on name, id, class)</li>
+        <li><a href="css_combinators.asp">Combinator selectors</a> (select  
+        elements based on a specific relationship between them)</li>
+        <li><a href="css_pseudo_classes.asp">Pseudo-class selectors</a> (select elements based on a certain state)</li>
+        <li><a href="css_pseudo_elements.asp">Pseudo-elements selectors</a> (select 
+        and style a part of an element)</li>
+        <li><a href="css_attribute_selectors.asp">Attribute selectors</a> (select elements based on 
+        an attribute or attribute value)</li>
+      </ul>
+      <h2>The CSS id Selector</h2>
+      <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
+      <p>The id of an element is unique within a page, so the id selector is 
+        used to 
+        select one unique element!</p>
+        <p>To select an element with a specific id, write a hash (#) character, followed by 
+            the id of the element.</p>
+            <u><h4>example of idselecters</h4></u>
+
     <a href="./selecters/idselecters.html">idselecters</a>
     <br>
+    <h2>The CSS class Selector</h2>
+    <p>The class selector selects HTML elements with a specific class attribute.</p>
+    <p>To select elements with a specific class, write a period (.) character, followed by the 
+        class name.</p>
+        <u><h4>example of classselecter</h4></u>
     <a href="./selecters/classselecters.html">classselecter</a>
+    <br>
+    <u><h2>CSS <span class="color_h1">border-radius</span> Property</h2></u>
+    <h2>Definition and Usage</h2>
+    <p>The <code class="w3-codespan">border-radius</code> property defines the radius of the 
+        element's corners.</p>
+        <p>This property can have from one to four values. Here are the rules:</p>
+        <p><strong>Four values - border-radius: 15px 50px 30px 5px; </strong>(first value applies to top-left 
+            corner, second value applies to top-right corner, third value applies to bottom-right corner, and fourth value applies to bottom-left corner):</p>
+            <p id="rcorners4" class="w3-theme"></p>
+            <p><strong>Three values - border-radius: 15px 50px 30px;</strong> (first value applies to top-left 
+                corner, second value applies to top-right and bottom-left corners, and third value applies to bottom-right corner):</p>
+                <p id="rcorners5" class="w3-theme"></p>
+                <p><strong>Two values - border-radius: 15px 50px; </strong>(first value applies to top-left and bottom-right corners, and the second value applies to top-right and bottom-left corners):</p>
+                <p id="rcorners6" class="w3-theme"></p>
+                <p><strong>One value - border-radius: 15px; </strong>(the value applies to all four corners, which are rounded equally:</p>
+                <p id="rcorners7" class="w3-theme"></p>
+                <u><h4>example of border radius</h4></u>
+                
+                
+    <a href="./border-radius/borderradius.html">border-radiu</a>
+    <br>
+    <u><h2>CSS <span class="color_h1">Font Size</span></h2></u>
+    <h2>Font Size</h2>
+    <p>The <code class="w3-codespan">font-size</code> property sets the size of the text.</p> 
+    <p>Being able to manage the text size is important in web design. However, you 
+        should not use font size adjustments to make paragraphs look like headings, or 
+        headings look like paragraphs.</p>
+        <p>Always use the proper HTML tags, like &lt;h1&gt; - &lt;h6&gt; for headings and &lt;p&gt; for 
+            paragraphs.</p>
+            <p>The font-size value can be  
+                an absolute, or relative size.</p>
+                <p>Absolute size:</p>
+                <ul>
+                    <li>Sets the text to a specified size</li>
+                    <li>Does not allow a user to change the text size in all browsers (bad for accessibility reasons)</li>
+                    <li>Absolute size is useful when the physical size of the output is known</li>
+                    </ul>
+                    <p>Relative size:</p>
+                    <ul>
+                        <li>Sets the size relative to surrounding elements</li>
+                        <li>Allows a user to change the text size in browsers</li>
+                        </ul>
+                        <u><h4>example of fontsize</h4></u>
+    <a href="./fontsize/fontsize.html">fontsize</a>  
+    <br>
+    <u><h2>CSS <span class="color_h1">position</span> Property</h2></u>
+    <h2>Definition and Usage</h2>
+    <p>The <code class="w3-codespan">position</code> property specifies the type of positioning method used for an 
+        element (static, relative, absolute, fixed, or sticky).</p>
+        <div class="w3-responsive">
+            <table class="ws-table-all">
+              <tbody><tr>
+                <th style="width:25%">Default value:</th>
+                <td>static</td>
+              </tr>
+              <tr>
+                <th>Inherited:</th>
+                <td>no</td>
+              </tr>
+              <tr>
+                <th>Animatable:</th>
+                <td>no. <a href="css_animatable.php">Read about <em>animatable</em></a>
+              </td>
+              </tr>
+              <tr>
+                <th>Version:</th>
+                <td>CSS2</td>
+              </tr>
+              <tr>
+                <th>JavaScript syntax:</th>
+                <td>  <i>object</i>.style.position="absolute"
+            <a target="_blank" class="w3-btn btnsmall" href="tryit.php?filename=trycss_js_position">Try it</a>
+            </td>
+              </tr>
+            </tbody></table>
+            </div>
+            <u><h4>example of position</h4></u>
+    <a href="./position/position.html">position</a>
+    <br>
+    <u><h2>CSS <span class="color_h1">Layout - Overflow</span></h2></u>
+    <h2>CSS Overflow</h2>
+    <p>The <code class="w3-codespan">overflow</code> property specifies whether to clip 
+        the content or 
+        to add scrollbars when the content of an element is too big to fit in the specified 
+        area.</p>
+        <p>The <code class="w3-codespan">overflow</code> property has the following values:</p>
+        <ul>
+            <li><code class="w3-codespan">visible</code> - Default. The overflow is not clipped. 
+            The content renders outside the element's box</li>
+            <li><code class="w3-codespan">hidden</code> - The overflow is clipped, and the rest of the content will be invisible</li>
+            <li><code class="w3-codespan">scroll</code> - The overflow is clipped, and a scrollbar is added to see the rest of the content</li>
+            <li><code class="w3-codespan">auto</code> - Similar to <code class="w3-codespan">scroll</code>, 
+            but it adds scrollbars only when necessary</li>
+            </ul>
+            <u><h4>example of overflow</h4></u>
+    <a href="./overflow/overflow.html">overflow</a>
+    <br>
+    <u><h2>CSS <span class="color_h1">calc()</span> Function</h2></u>
+    <h2>Definition and Usage</h2>
+    <p>The calc() function performs a calculation to be used as the property value.</p>
+    <u><h4>example of calc</h4></u>
+    <a href="./calck/calck.html">calck</a>
 </div>
 
 </body>
