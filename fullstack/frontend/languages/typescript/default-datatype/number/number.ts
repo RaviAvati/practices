@@ -1,0 +1,1 @@
+let mony:number=50000

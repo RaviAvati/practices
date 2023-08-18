@@ -1,0 +1,22 @@
+<script>
+    function* icecreamgiver(){
+        yield "ice cream 1"
+        yield "ice cream 1"
+        yield "ice cream 1"
+    }
+
+    let ravitaking=icecreamgiver()
+    console.log("ravi",ravitaking.next())
+    console.log("ravi",ravitaking.next())
+    console.log("ravi",ravitaking.next())
+    console.log("ravi",ravitaking.next())
+
+    console.log("p1",icecreamgiver().next())
+    console.log("p1",icecreamgiver().next())
+    console.log("p1",icecreamgiver().next())
+    console.log("p1",icecreamgiver().next())
+    
+
+
+
+</script>
