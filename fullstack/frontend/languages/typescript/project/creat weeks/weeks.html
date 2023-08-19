@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Change Monthon</title>
+</head>
+<body>
+    <center><div class="container">
+        <p id="weeks">weeks</p>
+        <button id="changeButton">Change weeks</button>
+    </div></center>
+   <script>
+      const weeksText = document.getElementById("weeks");
+      const changeButton = document.getElementById("changeButton");
+      
+      // Create an array of days of the week
+      const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+      
+      let currentDayIndex = 0;
+      
+      changeButton.addEventListener("click", () => {
+          // Cycle through the daysOfWeek array
+          currentDayIndex = (currentDayIndex + 1) % daysOfWeek.length;
+          weeksText.textContent = daysOfWeek[currentDayIndex];
+      });
+   </script>
+</body>
+</html>

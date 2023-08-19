@@ -16,4 +16,14 @@
 
      console.log(output)
 
+     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      
+      let currentMonthIndex = 0;
+      
+      changeButton.addEventListener("click", () => {
+          // Cycle through the months array
+          currentMonthIndex = (currentMonthIndex + 1) % months.length;
+          monthonElement.textContent = months[currentMonthIndex];
+      });
+
 </script>
