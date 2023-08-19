@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Image Slideshow</title>
+    <style>
+        /* styles.css */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+#slideshowImage {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease-in-out;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="slideshowImage" src="" alt="Slideshow Image">
+        <button id="nextButton">Next</button>
+    </div>
+    <script >
+        // script.js
+const slideshowImage = document.getElementById("slideshowImage");
+const nextButton = document.getElementById("nextButton");
+
+const imagePaths = [
+    "photo.jpg",
+    "photo.jpg",
+    "photo.jpg",
+    // Add more image paths here
+];
+
+let currentImageIndex = 0;
+
+function showNextImage() {
+    currentImageIndex = (currentImageIndex + 1) % imagePaths.length;
+    const imagePath = imagePaths[currentImageIndex];
+    slideshowImage.src = imagePath;
+}
+
+nextButton.addEventListener("click", showNextImage);
+
+// Initial image load
+showNextImage();
+
+    </script>
+</body>
+</html>
+
+

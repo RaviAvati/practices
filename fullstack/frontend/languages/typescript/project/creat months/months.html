@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Change Monthon</title>
+</head>
+<body>
+    <center><div class="container">
+        <p id="monthon">Months</p>
+        <button id="changeButton">Change Monthon</button>
+    </div></center>
+   <script>
+      const monthonElement = document.getElementById("monthon");
+      const changeButton = document.getElementById("changeButton");
+      
+      // Create an array of months
+      const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      
+      let currentMonthIndex = 0;
+      
+      changeButton.addEventListener("click", () => {
+          // Cycle through the months array
+          currentMonthIndex = (currentMonthIndex + 1) % months.length;
+          monthonElement.textContent = months[currentMonthIndex];
+      });
+   </script>
+</body>
+</html>
+

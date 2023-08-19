@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Online Video Generator</title>
+    <style>
+        /* styles.css */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="generateButton">Generate Videos</button>
+        <div id="videoContainer"></div>
+    </div>
+    <script >// script.js
+        const generateButton = document.getElementById("generateButton");
+        const videoContainer = document.getElementById("videoContainer");
+        
+        const videoUrls = [ "https://www.youtube.com/embed/se9DDAwwGQY" ,
+            "https://youtu.be/KUpwupYj_tY",
+            "https://youtu.be/ElZfdU54Cp8",
+            "https://www.youtube.com/embed/VIDEO_ID_3"
+            // Add more video URLs
+        ];
+        
+        function generateVideos() {
+            videoContainer.innerHTML = "";
+        
+            videoUrls.forEach((url) => {
+                const videoIframe = document.createElement("iframe");
+                videoIframe.src = url;
+                videoIframe.setAttribute("frameborder", "0");
+                videoIframe.setAttribute("allowfullscreen", "true");
+                videoContainer.appendChild(videoIframe);
+            });
+        }
+        
+        generateButton.addEventListener("click", generateVideos);
+        </script>
+</body>
+</html>
