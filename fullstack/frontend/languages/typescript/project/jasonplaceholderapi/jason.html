@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            background-color: #f0f0f0; /* Default background color */
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <button onclick="loadData()"> Data</button>
+
+    <script>
+        async function loadData() {
+            let div = document.getElementById("root");
+
+            let apidata = await (await fetch('https://jsonplaceholder.typicode.com/comments')).json();
+
+            apidata.forEach((cardData) => {
+                let card = document.createElement("div");
+                card.className = "card";
+
+                let h1 = document.createElement("h1");
+                h1.innerHTML = `postId: ${cardData.postId}`;
+                card.appendChild(h1);
+
+                let h2 = document.createElement("h2");
+                h2.innerHTML = `id: ${cardData.id}`;
+                card.appendChild(h2);
+
+                let h3 = document.createElement("h3");
+                h3.innerHTML = `name: ${cardData.name}`;
+                card.appendChild(h3);
+
+                let h4 = document.createElement("h4");
+                h4.innerHTML = `email: ${cardData.email}`;
+                card.appendChild(h4);
+
+                // Generate a random background color
+                const randomColor = getRandomColor();
+                card.style.backgroundColor = randomColor;
+
+                div.appendChild(card);
+            });
+        }
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>

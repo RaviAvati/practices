@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stopwatch</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  .stopwatch {
+    font-size: 36px;
+    margin-top: 50px;
+  }
+  .buttons {
+    margin-top: 20px;
+  }
+</style> 
+</head>
+<body>
+<div class="stopwatch">00:00:00</div>
+<div class="buttons">
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+  <button id="reset">Reset</button>
+</div>
+
+<script>
+  let startTime;
+  let interval;
+
+  const stopwatchElement = document.querySelector(".stopwatch");
+  const startButton = document.getElementById("start");
+  const stopButton = document.getElementById("stop");
+  const resetButton = document.getElementById("reset");
+
+  function startStopwatch() {
+    startTime = Date.now() - (startTime ? startTime : 0);
+    interval = setInterval(updateStopwatch, 1000);
+  }
+
+  function stopStopwatch() {
+    clearInterval(interval);
+  }
+
+  function resetStopwatch() {
+    clearInterval(interval);
+    startTime = undefined;
+    stopwatchElement.textContent = "00:00:00";
+  }
+
+  function updateStopwatch() {
+    const currentTime = new Date(Date.now() - startTime);
+    const hours = currentTime.getUTCHours().toString().padStart(2, "0");
+    const minutes = currentTime.getUTCMinutes().toString().padStart(2, "0");
+    const seconds = currentTime.getUTCSeconds().toString().padStart(2, "0");
+
+    stopwatchElement.textContent = `${hours}:${minutes}:${seconds}`;
+  }
+
+  startButton.addEventListener("click", startStopwatch);
+  stopButton.addEventListener("click", stopStopwatch);
+  resetButton.addEventListener("click", resetStopwatch);
+</script>
+</body>
+</html>
