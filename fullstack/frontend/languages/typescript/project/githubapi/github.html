@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <button onclick="github()">click</button>
+
+    <script>
+        // Generate a random color
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        async function github() {
+            let div = document.getElementById("root");
+
+            let apidata = await (await fetch('https://api.github.com/users')).json();
+
+            apidata.map((card) => {
+                // Create a wrapper div for each card
+                let cardWrapper = document.createElement("div");
+                cardWrapper.classList.add("card");
+                cardWrapper.style.backgroundColor = getRandomColor();
+                
+                 
+                let contentDiv = document.createElement("div");
+                contentDiv.classList.add("content");
+
+                let h1 = document.createElement("h1");
+                h1.innerHTML = `login: ${card.login}`;
+                contentDiv.appendChild(h1);
+
+                let h2 = document.createElement("h2")
+                h2.innerHTML = `id:${card.id}`;
+                contentDiv.appendChild(h2);
+
+                let h3 = document.createElement("h3")
+                h3.innerHTML = `node_id:${card.node_id}`;
+                contentDiv.appendChild(h3);
+
+                let h4 = document.createElement("h4")
+                h4.innerHTML = `avatar_url:${card.avatar_url}`;
+                contentDiv.append(h4);
+
+                cardWrapper.appendChild(contentDiv);
+
+                // Create an img element for the image
+                let avatar_url = document.createElement('img');
+                avatar_url.src = card.avatar_url;
+                avatar_url.width = 200;
+                avatar_url.height = 200;
+                cardWrapper.appendChild(avatar_url);
+
+                div.appendChild(cardWrapper);
+
+                console.log(card);
+            });
+        }
+    </script>
+
+    <style>
+        .card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .content {
+            flex: 1;
+            padding-right: 20px;
+        }
+    </style>
+</body>
+
+</html>

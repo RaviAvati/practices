@@ -1,0 +1,32 @@
+<script>
+    // let mypromise=new Promise((ravi,rocky)=>{
+    //     setTimeout(()=>{
+    //          ravi("people evry one come finally  ")
+    //          rocky("i told he wont give party")
+    //     },2000)
+
+    // })
+
+
+    // mypromise.then((a)=>{
+    //     console.log("ravi",a)
+    //     mypromise.catch((a)=>{
+    //         console.log("rocky",a)
+    //     })
+    // })
+
+    let p1=250
+    let p2=new Promise((res,set)=>{
+        setTimeout(()=>{
+            res(250)
+        },2000)
+
+    })
+    let p3=250  
+
+    p2.then((per2)=>{
+        let total=p1+per2+p3
+        console.log(total)
+    })
+
+</script>
